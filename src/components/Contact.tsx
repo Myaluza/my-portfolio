@@ -42,16 +42,43 @@ export default function Contact() {
 
 
     return (
-        <div>
-            <label htmlFor="name">Name</label>
-            <input id="name" name="name" value={formData.name} onChange={handleChange}/>
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" value={formData.email} onChange={handleChange}/>
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" value={formData.message} onChange={handleChange}/>
-            {status === "sending" ? <button onClick={handleSubmit} disabled>Sending...</button> : <button onClick={handleSubmit}>Send</button>}
-            {status === "success" && <p>Message sent successfully!</p>}
-            {status === "error" && <p>Something went wrong. Please try again.</p>}
-        </div>
+        <section className="bg-navy px-6 py-12">
+                <div className="max-w-md mx-auto flex flex-col gap-4">
+                    <label htmlFor="name" className="font-body text-sm text-slate mb-1">Name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full bg-navy/40 border border-teal/30 rounded-lg px-4 py-2 text-offwhite placeholder-slate focus:outline-none focus:border-gold"
+                    />
+                    <label htmlFor="email" className="font-body text-sm text-slate mb-1">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-navy/40 border border-teal/30 rounded-lg px-4 py-2 text-offwhite placeholder-slate focus:outline-none focus:border-gold"
+                    />
+                    <label htmlFor="message" className="font-body text-sm text-slate mb-1">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={4}
+                        className="w-full bg-navy/40 border border-teal/30 rounded-lg px-4 py-2 text-offwhite placeholder-slate focus:outline-none focus:border-gold"
+                    />
+                    <button
+                        onClick={handleSubmit}
+                        disabled={status === "sending"}
+                        className="bg-gold text-navy font-bold px-6 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                        {status === "sending" ? "Sending..." : "Send"}
+                    </button>
+                    {status === "success" && <p className="text-teal">Message sent successfully!</p>}
+                    {status === "error" && <p className="text-red-400">Something went wrong. Please try again.</p>}
+                </div>
+        </section>
     )
 }

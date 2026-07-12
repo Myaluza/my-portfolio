@@ -5,10 +5,10 @@ interface HeroProps {
 
 export default function Hero({ name, tagline }: HeroProps) {
     return (
-        <>
-            <h1>{name}</h1>
-            <p>{tagline}</p>
-        </>
+        <section className="bg-navy text-offwhite px-6 py-8 text-center">
+            <h1 className="font-display text-4xl font-bold text-gold md:text-6xl">{name}</h1>
+            <p className="font-body text-base text-slate mt-4 md:text-xl">{tagline}</p>
+        </section>
         
     )
 }
