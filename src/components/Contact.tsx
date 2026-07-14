@@ -42,7 +42,7 @@ export default function Contact() {
 
 
     return (
-        <section className="bg-navy px-6 py-12">
+        <section className="bg-navy px-6 py-16">
                 <div className="max-w-md mx-auto flex flex-col gap-4">
                     <label htmlFor="name" className="font-body text-sm text-slate mb-1">Name</label>
                     <input

@@ -10,14 +10,14 @@ interface SkillsProps {
 export default function Skills({ skills }: SkillsProps) {
     const skillsEl = skills.map(skill => {
         return (
-            <div key={skill.name} className="bg-navy/40 border border-teal/30 rounded-lg px-16 py-4 text-center">
+            <div key={skill.name} className="bg-navy/40 border border-teal/30 rounded-lg px-16 py-4 text-center hover:scale-105 hover:border-gold transition-all duration-200">
                 <p className="font-display text-offwhite font-medium">{skill.name}</p>
                 <p className="font-body text-sm text-slate">{skill.category}</p>
             </div>
         )
     })
     return (
-        <section className="bg-navy px-6 py-4">
+        <section className="bg-navy px-6 py-8">
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
                 {skillsEl}
             </div>
