@@ -17,7 +17,7 @@ export default function Skills({ skills }: SkillsProps) {
         )
     })
     return (
-        <section className="bg-navy px-6 py-8">
+        <section id="skills" className="bg-navy px-6 py-8">
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
                 {skillsEl}
             </div>

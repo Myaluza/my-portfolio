@@ -41,7 +41,7 @@ export default function Projects({ projects }: ProjectsProps) {
     })
 
     return (
-        <section className="bg-offwhite px-6 py-16">
+        <section id="projects" className="bg-offwhite px-6 py-16">
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-6">
                 {projectsEl}
             </div>
